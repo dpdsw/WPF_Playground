@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Playground"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="900"
+        Title="MainWindow" Height="600" Width="1000"
         WindowStyle="None" ResizeMode="NoResize" Background="#181735">
     <Grid>
         <Grid.RowDefinitions>
@@ -33,21 +33,21 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <TextBlock Text=" Epic Test" Foreground="White" Grid.Column="0" VerticalAlignment="Center"
+            <TextBlock Text="Menu" Foreground="White" Grid.Column="0" VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Font/#Dosis" FontWeight="Medium" FontSize="18"></TextBlock>
 
-            <TextBlock Text="Menu" Foreground="White" Grid.Column="1" VerticalAlignment="Center"
+            <TextBlock Text="Home" Foreground="White" Grid.Column="1" VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Font/#Dosis" FontWeight="Medium" FontSize="18"></TextBlock>
 
-            <TextBlock Text="Website" Foreground="White" Grid.Column="2" VerticalAlignment="Center"
+            <TextBlock Text="Contact" Foreground="White" Grid.Column="2" VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Font/#Dosis" FontWeight="Medium" FontSize="18"></TextBlock>
 
-            <Button Content="Start" Foreground="Red" FontSize="11" FontWeight="Medium" Margin="0,0,10,0" Grid.Column="9"
-                    Grid.ColumnSpan="2">
+            <Button Content="Start" Foreground="Black" FontSize="11" FontWeight="Medium" Margin="0,0,10,0" Grid.Column="9"
+                    Grid.ColumnSpan="2" Cursor="Hand">
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
-                        <Setter Property="Background" Value="Beige"/>
+                        <Setter Property="Background" Value="#5FEBE8"/>
                         <Setter Property="Cursor" Value="Hand"/>
 
                         <Style.Triggers>
@@ -73,8 +73,8 @@
         <StackPanel Grid.Row="1" VerticalAlignment="Center" Margin="50,0,0,0">
             <StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
-                    <Image Source="Images/Menu.png" Width="50" Height="50" RenderOptions.BitmapScalingMode="Fant"></Image>
-                    <TextBlock Text="PaulCo" Foreground="White"
+                    <Image Source="Images/RedCircle.png" Width="50" Height="50" RenderOptions.BitmapScalingMode="Fant"></Image>
+                    <TextBlock Text="WPF Playground" Foreground="White"
                            FontSize="20" FontWeight="Medium"
                            VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15,0,0,0">
                     </TextBlock>
@@ -95,7 +95,7 @@
                            VerticalAlignment="Center" HorizontalAlignment="Left">
                 </TextBlock>
 
-                <TextBlock Text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." Foreground="White"
+                <TextBlock Text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." Foreground="White"
                            FontSize="12" FontWeight="Medium" FontFamily="Font/#Dosis"
                            VerticalAlignment="Center" HorizontalAlignment="Left"
                         TextWrapping="Wrap" Margin="0,10,0,0">
@@ -103,16 +103,18 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
-                <Button Content="Start" Foreground="Red" FontSize="12" FontWeight="Medium" Margin="0,0,10,0">
+                <Button Content="Start" Foreground="Black" FontSize="12" FontWeight="Medium" Margin="0,0,10,0">
                     <Button.Style>
                         <Style TargetType="Button">
                             <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
-                            <Setter Property="Background" Value="Beige"/>
+                            <Setter Property="Background" Value="#EBB252"/>
                             <Setter Property="Cursor" Value="Hand"/>
 
                             <Style.Triggers>
                                 <Trigger Property="IsMouseOver" Value="True">
                                     <Setter Property="Background" Value="BlueViolet"></Setter>
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="True">                            
                                 </Trigger>
                             </Style.Triggers>
                         </Style>
@@ -128,11 +130,11 @@
                     </Button.Template>
                 </Button>
 
-                <Button Content="Register" Foreground="Red" FontSize="12" FontWeight="Medium">
+                <Button Content="Register" Foreground="Black" FontSize="12" FontWeight="Medium">
                     <Button.Style>
                         <Style TargetType="Button">
                             <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
-                            <Setter Property="Background" Value="#39385d"/>
+                            <Setter Property="Background" Value="#EB726A"/>
                             <Setter Property="Cursor" Value="Hand"/>
 
                             <Style.Triggers>
@@ -158,55 +160,79 @@
 
         <Grid Grid.Column="1" Grid.RowSpan="2" Margin="160,-365, -610,85" Panel.ZIndex="-1">
             <Grid.RenderTransform>
-                <RotateTransform Angle="50"/>
-                
+                <RotateTransform Angle="50
+                                 "/>
+
             </Grid.RenderTransform>
 
             <StackPanel Orientation="Horizontal" Margin="-350,250,-255,-250">
                 <StackPanel>
-                    <Border Width="700"
+                    <Border Width="571"
                             Height="35"
                             Background="#3DDDC2"
-                            Margin="150, 0 ,0 ,0"
+                            Margin="225, 0 ,0 ,0"
                             CornerRadius="20"/>
 
-                    <Border Width="700"
+                    <Border Width="621"
                             Height="35"
-                            Background="#FC9DC2"
+                            Background="#EB726A"
                             Margin="0, 15 , 0 ,0"
                             CornerRadius="20"/>
 
-                    <Border Width="700"
+                    <Border Width="638"
                             Height="35"
-                            Background="#384366"
+                            Background="#EBB252"
                             Margin="75,15,0,0"
                             CornerRadius="20"/>
-              
+
                 </StackPanel>
 
                 <StackPanel>
-                    <Border Width="700"
+
+                    <Border Width="71"
                             Height="35"
                             Background="#3DDDC2"
-                            Margin="150, 0 ,0 ,0"
                             CornerRadius="20"/>
 
-                    <Border Width="700"
+                    <Border Width="102"
                             Height="35"
-                            Background="#FC9DC2"
+                            Background="#EB726A"
                             Margin="0, 15 , 0 ,0"
                             CornerRadius="20"/>
 
-                    <Border Width="700"
+                    <Border Width="75"
                             Height="35"
-                            Background="#384366"
-                            Margin="75,15,0,0"
+                            Background="#EBB252"
+                            Margin="15,15,0,0"
                             CornerRadius="20"/>
 
                 </StackPanel>
+
+                <StackPanel>
+
+                    <Border Width="614"
+                            Height="35"
+                            Background="#3DDDC2"
+                            CornerRadius="20"/>
+
+                    <Border Width="427"
+                            Height="35"
+                            Background="#EB726A"
+                            Margin="0, 15 , 0 ,0"
+                            CornerRadius="20"/>
+
+                    <Border Width="555"
+                            Height="35"
+                            Background="#EBB252"
+                            Margin="45,15,0,0"
+                            CornerRadius="20"/>
+
+                </StackPanel>
+
+
             </StackPanel>
-            
+
         </Grid>
-       
+
     </Grid>
 </Window>
